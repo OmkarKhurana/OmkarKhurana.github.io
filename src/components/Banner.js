@@ -7,9 +7,9 @@ export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const toRotate = ["Web Developer", "Web Designer", "UI/UX Designer"];
-  const [text, setText] = useState("");
-  const [delta, setDelta] = useState(300 - Math.random() * 100);
-  const period = 2000;
+  const [text, setText] = useState(" ");
+  const [delta, setDelta] = useState(100 - Math.random() * 200);
+  const period = 500;
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -40,8 +40,11 @@ export const Banner = () => {
     } else if (isDeleting && updatedText === "") {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
-      setDelta(500);
+      setDelta(200);
+      updatedText = "\n"; // Add a line break in place of the fully deleted text
+      setText(updatedText);
     }
+    
   };
 
   return (
@@ -51,20 +54,23 @@ export const Banner = () => {
           <Col xs={12} md={6} xl={7}>
             <span className="tagline">Welcome to my Portfolio</span>
             <h1>
-              {`Hi I'm Omkar Khurana `}
-              <span className="wrap">{text}</span>
+            {`Hi I'm Omkar Khurana `}
+            {isDeleting ? <br/> : null}
+            <span className="wrap">{text}</span>
             </h1>
             <p>
               Lorem Ipsum has been the industry's standard dummy text ever since
               the 1500s, when an unknown printer took a galley of type and
               scrambled it to make a type specimen book.{" "}
             </p>
-            <button onClick={() => console.log("connect")}>
+            <div className="banner-btn">
+              <button onClick={() => console.log("connect")}>
               Let's Connect<ArrowRightCircle size={25}></ArrowRightCircle>
             </button>
             <button onClick={() => console.log("resume maang rha hai")}>
               Resume<ArrowRightCircle size={25}></ArrowRightCircle>
-            </button>
+            </button> 
+            </div>
           </Col>
           <Col xs={12} md={6} xl={5}>
             <img src={headerImg} alt="Header Img" />
