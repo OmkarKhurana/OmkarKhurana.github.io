@@ -9,32 +9,32 @@ import { ProjectCard } from "./ProjectCard";
 export const Projects = () => {
   const projects = [
     {
-      title: "Business Startup",
+      title: "Project #1",
       description: "Design & Development",
       imgUrl: projImg1,
     },
     {
-      title: "Business Startup",
+      title: "Project #2",
       description: "Design & Development",
       imgUrl: projImg2,
     },
     {
-      title: "Business Startup",
+      title: "Project #3",
       description: "Design & Development",
       imgUrl: projImg3,
     },
     {
-      title: "Business Startup",
+      title: "Project #4",
       description: "Design & Development",
       imgUrl: projImg1,
     },
     {
-      title: "Business Startup",
+      title: "Project #5",
       description: "Design & Development",
       imgUrl: projImg2,
     },
     {
-      title: "Business Startup",
+      title: "Project #6",
       description: "Design & Development",
       imgUrl: projImg3,
     },
@@ -52,7 +52,7 @@ export const Projects = () => {
               do.
             </p>
             <Tab.Container id="projects-tabs" defaultActiveKey="first">
-              <Nav variant="pills" defaultActiveKey="/home" className="nav-pills mb-5 justify-content-center" id="pills-tab">
+              <Nav variant="pills" className="nav-pills mb-5 justify-content-center" id="pills-tab">
                 <Nav.Item>
                   <Nav.Link eventKey="first">Tab 1</Nav.Link>
                 </Nav.Item>
@@ -88,7 +88,7 @@ export const Projects = () => {
           </Col>
         </Row>
       </Container>
-      <img className="background-img-right" src={colorSharp2} alt="image" />
+      <img className="background-image-right" src={colorSharp2} alt="image" />
     </section>
   );
 };

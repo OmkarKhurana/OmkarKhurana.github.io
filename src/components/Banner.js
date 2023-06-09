@@ -54,7 +54,7 @@ export const Banner = () => {
             <span className="tagline">Welcome to my Portfolio</span>
             <h1>
               {`Hi I'm Omkar Khurana `}
-              {/* <span className="wrap">{text}</span> */}
+              <br></br>
               <span className="txt-rotate">
                 <span className="wrap">{text}</span>
               </span>
@@ -68,7 +68,6 @@ export const Banner = () => {
               <button onClick={() => console.log("connect")}>
                 Let's Connect<ArrowRightCircle size={25}></ArrowRightCircle>
               </button>
-              npm
               <button onClick={() => console.log("resume maang rha hai")}>
                 Resume<ArrowRightCircle size={25}></ArrowRightCircle>
               </button>
